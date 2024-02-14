@@ -1,3 +1,10 @@
+"""
+Generate sounds with slab
+-create pure tone with 1500 and 500 Hz frequency respectively
+-apply different itds to the pure tone
+-write the sounds to a given directory
+"""
+
 import slab
 import os
 
@@ -14,7 +21,7 @@ slab.set_default_samplerate(44100)
 itds= [ -0.0003,  -0.0005, 0.0, 0.0003, 0.0005] # Create list
 
 
-# Generate  sound with 1000 Hz
+# Generate  sound with 1500 Hz
 sound = slab.Sound.tone(frequency=1500, duration=0.5)
 
 for itd in itds: # for loop
@@ -22,7 +29,6 @@ for itd in itds: # for loop
     stimulus= stimulus.itd(duration=itd)
     # Save sound files
     stimulus.write(sound_folder +"/tone-1500Hz_itd-"+ str(itd)+".wav", normalise=True, fmt='WAV')
-
 
 
 sound = slab.Sound.tone(frequency=500, duration=0.5)

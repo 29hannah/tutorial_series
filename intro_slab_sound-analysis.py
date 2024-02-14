@@ -1,3 +1,10 @@
+"""
+Basic sound analysis in slab
+-read in sound files
+-play sound file
+-noise and harmonic sounds
+-plot waveform, spectrum, and spectrogram
+"""
 import slab
 import os
 import pathlib
@@ -38,7 +45,7 @@ noise.spectrogram()
 noise.write(DIR + "/whitenoise.wav", normalise=True, fmt='WAV')
 
 
-#
+# harmonic sound
 harmonic=slab.Sound.harmoniccomplex(f0=500)
 harmonic.spectrum()
 harmonic.waveform()
