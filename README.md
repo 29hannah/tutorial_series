@@ -6,3 +6,5 @@
    * Different types of sound
    * Running a simple psychoacoustic experiment
 * Analyzing behavioral data
+   * Intro to pandas
+   * Intro to matplotlib and seaborn
