@@ -5,6 +5,8 @@ Basic sound analysis in slab
 -noise and harmonic sounds
 -plot waveform, spectrum, and spectrogram
 """
+#TODO numpy arrays->sounds->plotting arrays, digital versus analog
+
 import slab
 import os
 import pathlib
